@@ -1,3 +1,5 @@
+export const config = { runtime: 'edge' }
+
 export default async function handler(req: Request) {
   const authHeader = req.headers.get('Authorization')
   const token = authHeader?.replace('Bearer ', '')

@@ -1,3 +1,5 @@
+export const config = { runtime: 'edge' }
+
 const contentMeta = {
   guide: {
     text: "学习路径",
