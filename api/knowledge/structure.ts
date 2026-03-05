@@ -11,7 +11,8 @@ const contentMeta = {
       { text: "第5章: 知识库管理", link: "/guide/05-knowledge-base" },
       { text: "第6章: 日程与任务管理", link: "/guide/06-schedule-tasks" },
       { text: "第7章: 自动化工作流", link: "/guide/07-automation" },
-      { text: "第8章: 进阶用法", link: "/guide/08-advanced" }
+      { text: "第8章: 进阶用法", link: "/guide/08-advanced" },
+      { text: "第9章: 安全配置", link: "/guide/09-security" }
     ]
   },
   reference: {
