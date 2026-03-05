@@ -1,4 +1,5 @@
 import { OpenAI } from 'openai'
+import contentMeta from '../../content-meta.json'
 
 export default async function handler(req: Request) {
   const authHeader = req.headers.get('Authorization')
@@ -22,10 +23,7 @@ async function handleCreate(req: Request) {
 
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
-  const structureRes = await fetch(new URL('/api/knowledge/structure', req.url), {
-    headers: { 'Authorization': req.headers.get('Authorization')! }
-  })
-  const currentStructure = await structureRes.json()
+  const currentStructure = contentMeta
 
   const response = await openai.chat.completions.create({
     model: 'gpt-4o',
